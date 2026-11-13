@@ -1,0 +1,224 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+  ],
+  "id": "landsat-c2l2-st",
+  "title": "Landsat Collection 2 Level-2 UTM Surface Temperature (ST) Product",
+  "description": "The Landsat Surface Temperature (ST) product represents the temperature of the Earth's surface in Kelvin (K). This collection contains USGS Landsat Collection 2 Level-2 surface temperature items from Landsat 4, 5, 7, 8 and 9, as stac-geoparquet partitioned by year and month. Items are fetched from the USGS landsatlook STAC API.",
+  "keywords": [
+    "landsat",
+    "landsat 4",
+    "landsat 5",
+    "landsat 7",
+    "landsat 8",
+    "landsat 9",
+    "surface temperature",
+    "usgs",
+    "stac-geoparquet"
+  ],
+  "license": "other",
+  "providers": [
+    {
+      "name": "U.S. Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center",
+      "roles": ["producer", "processor", "licensor"],
+      "url": "https://www.usgs.gov/landsat-missions"
+    },
+    {
+      "name": "Development Seed",
+      "roles": ["processor"],
+      "url": "https://developmentseed.org"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": ["host"],
+      "url": "https://source.coop"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [[-180, -90, 180, 90]]
+    },
+    "temporal": {
+      "interval": [["1982-08-22T00:00:00.000Z", null]]
+    }
+  },
+  "summaries": {
+    "platform": [
+      "LANDSAT_4",
+      "LANDSAT_5",
+      "LANDSAT_7",
+      "LANDSAT_8",
+      "LANDSAT_9"
+    ],
+    "view:off_nadir": {
+      "minimum": 0,
+      "maximum": 90
+    }
+  },
+  "item_assets": {
+    "thumbnail": {
+      "title": "Thumbnail image",
+      "type": "image/jpeg",
+      "roles": ["thumbnail"]
+    },
+    "reduced_resolution_browse": {
+      "title": "Reduced resolution browse image",
+      "type": "image/jpeg",
+      "roles": ["overview"]
+    },
+    "index": {
+      "title": "HTML index page",
+      "type": "text/html",
+      "roles": ["metadata"]
+    },
+    "MTL.json": {
+      "title": "Product Metadata File (json)",
+      "description": "Collection 2 Level-2 Product Metadata File (json)",
+      "type": "application/json",
+      "roles": ["metadata"]
+    },
+    "lwir11": {
+      "title": "Surface Temperature Band (B10)",
+      "description": "Collection 2 Level-2 Surface Temperature Band (B10) Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data", "temperature"],
+      "eo:bands": [
+        {
+          "name": "B10",
+          "common_name": "lwir11",
+          "gsd": 100,
+          "center_wavelength": 10.9
+        }
+      ]
+    },
+    "TRAD": {
+      "title": "Thermal Radiance Band",
+      "description": "Collection 2 Level-2 Thermal Radiance Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "URAD": {
+      "title": "Upwelled Radiance Band",
+      "description": "Collection 2 Level-2 Upwelled Radiance Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "DRAD": {
+      "title": "Downwelled Radiance Band",
+      "description": "Collection 2 Level-2 Downwelled Radiance Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "ATRAN": {
+      "title": "Atmospheric Transmittance Band",
+      "description": "Collection 2 Level-2 Atmospheric Transmittance Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "EMIS": {
+      "title": "Emissivity Band",
+      "description": "Collection 2 Level-2 Emissivity Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "EMSD": {
+      "title": "Emissivity Standard Deviation Band",
+      "description": "Collection 2 Level-2 Emissivity Standard Deviation Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "CDIST": {
+      "title": "Cloud Distance Band",
+      "description": "Collection 2 Level-2 Cloud Distance Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "qa": {
+      "title": "Surface Temperature Quality Assessment Band",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "qa_pixel": {
+      "title": "Pixel Quality Assessment Band",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["cloud", "cloud-shadow", "snow-ice", "water-mask"]
+    },
+    "qa_radsat": {
+      "title": "Radiometric Saturation Quality Assessment Band",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["saturation"]
+    },
+    "ANG.txt": {
+      "title": "Angle Coefficients File",
+      "description": "Collection 2 Level-2 Angle Coefficients File (ANG)",
+      "type": "text/plain",
+      "roles": ["metadata"]
+    },
+    "MTL.txt": {
+      "title": "Product Metadata File",
+      "description": "Collection 2 Level-2 Product Metadata File (MTL)",
+      "type": "text/plain",
+      "roles": ["metadata"]
+    },
+    "MTL.xml": {
+      "title": "Product Metadata File (xml)",
+      "type": "application/xml",
+      "roles": ["metadata"]
+    },
+    "lwir": {
+      "title": "Surface Temperature Band (B6)",
+      "description": "Collection 2 Level-2 Surface Temperature Band Surface Temperature Product",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data", "temperature"],
+      "eo:bands": [
+        {
+          "name": "B6",
+          "common_name": "lwir",
+          "center_wavelength": 11.45
+        }
+      ]
+    }
+  },
+  "assets": {},
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/Landsat_Data_Policy.pdf",
+      "type": "application/pdf",
+      "title": "Landsat Data Policy"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5066/P9OGBGM6",
+      "title": "Landsat 8-9 OLI/TIRS Collection 2 Level-2"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5066/P9C7I13B",
+      "title": "Landsat 7 ETM+ Collection 2 Level-2"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5066/P9IAXOVV",
+      "title": "Landsat 4-5 TM Collection 2 Level-2"
+    },
+    {
+      "rel": "about",
+      "href": "https://landsatlook.usgs.gov/stac-server",
+      "title": "USGS landsatlook STAC API"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "id": "stac-geoparquet-archives",
+  "title": "stac-geoparquet archives",
+  "description": "stac-geoparquet catalogs of public geospatial datasets, hosted on Source Cooperative.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./sentinel-2-c1-l2a/collection.json",
+      "type": "application/json",
+      "title": "Sentinel-2 Collection 1 Level-2A"
+    },
+    {
+      "rel": "child",
+      "href": "./landsat-c2l2-sr/collection.json",
+      "type": "application/json",
+      "title": "Landsat Collection 2 Level-2 UTM Surface Reflectance (SR) Product"
+    },
+    {
+      "rel": "child",
+      "href": "./landsat-c2l2-st/collection.json",
+      "type": "application/json",
+      "title": "Landsat Collection 2 Level-2 UTM Surface Temperature (ST) Product"
+    }
+  ]
+}
