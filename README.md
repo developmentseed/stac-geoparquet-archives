@@ -4,6 +4,8 @@
 
 stac-geoparquet catalogs of public geospatial datasets, hosted on source.coop.
 
+The STAC catalog and collections live in [catalog/](./catalog/catalog.json).
+
 ## Contributing
 
 We use [uv](https://docs.astral.sh/uv/) to manage the project.
@@ -18,13 +20,12 @@ uv sync
 Before opening a pull request, make sure the same checks that run in CI pass locally:
 
 ```shell
-uv run ruff format --check
-uv run ruff check
-uv run ty check
+scripts/lint
 uv run pytest
 ```
 
-Use `uv run ruff format` to fix any formatting issues.
+Use `scripts/format` to fix any formatting issues.
+Linting and formatting JSON and Markdown uses [Prettier](https://prettier.io/) via `npx`, so you'll need [Node.js](https://nodejs.org/) (the version is in `.nvmrc`).
 
 ## License
 

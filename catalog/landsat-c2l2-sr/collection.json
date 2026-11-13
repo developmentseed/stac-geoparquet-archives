@@ -1,0 +1,523 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
+  ],
+  "id": "landsat-c2l2-sr",
+  "title": "Landsat Collection 2 Level-2 UTM Surface Reflectance (SR) Product",
+  "description": "The Landsat Surface Reflectance (SR) product measures the fraction of incoming solar radiation that is reflected from Earth's surface to the Landsat sensor. This collection contains USGS Landsat Collection 2 Level-2 surface reflectance items from Landsat 4, 5, 7, 8 and 9, as stac-geoparquet partitioned by year and month. Items are fetched from the USGS landsatlook STAC API.",
+  "keywords": [
+    "landsat",
+    "landsat 4",
+    "landsat 5",
+    "landsat 7",
+    "landsat 8",
+    "landsat 9",
+    "surface reflectance",
+    "usgs",
+    "stac-geoparquet"
+  ],
+  "license": "other",
+  "providers": [
+    {
+      "name": "U.S. Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center",
+      "roles": ["producer", "processor", "licensor"],
+      "url": "https://www.usgs.gov/landsat-missions"
+    },
+    {
+      "name": "Development Seed",
+      "roles": ["processor"],
+      "url": "https://developmentseed.org"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": ["host"],
+      "url": "https://source.coop"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [[-180, -90, 180, 90]]
+    },
+    "temporal": {
+      "interval": [["1982-08-22T00:00:00.000Z", null]]
+    }
+  },
+  "summaries": {
+    "platform": [
+      "LANDSAT_4",
+      "LANDSAT_5",
+      "LANDSAT_7",
+      "LANDSAT_8",
+      "LANDSAT_9"
+    ],
+    "view:off_nadir": {
+      "minimum": 0,
+      "maximum": 90
+    }
+  },
+  "item_assets": {
+    "thumbnail": {
+      "title": "Thumbnail image",
+      "type": "image/jpeg",
+      "roles": ["thumbnail"]
+    },
+    "reduced_resolution_browse": {
+      "title": "Reduced resolution browse image",
+      "type": "image/jpeg",
+      "roles": ["overview"]
+    },
+    "index": {
+      "title": "HTML index page",
+      "type": "text/html",
+      "roles": ["metadata"]
+    },
+    "MTL.json": {
+      "title": "Product Metadata File (json)",
+      "description": "Collection 2 Level-2 Product Metadata File (json)",
+      "type": "application/json",
+      "roles": ["metadata"]
+    },
+    "coastal": {
+      "title": "Coastal/Aerosol Band (B1)",
+      "description": "Collection 2 Level-2 Coastal/Aerosol Band (B1) Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"],
+      "eo:bands": [
+        {
+          "name": "B1",
+          "common_name": "coastal",
+          "gsd": 30,
+          "center_wavelength": 0.44
+        }
+      ]
+    },
+    "blue": {
+      "title": "Blue Band",
+      "description": "Collection 2 Level-2 Blue Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"],
+      "eo:bands": [
+        {
+          "common_name": "blue",
+          "gsd": 30
+        }
+      ]
+    },
+    "green": {
+      "title": "Green Band",
+      "description": "Collection 2 Level-2 Green Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"],
+      "eo:bands": [
+        {
+          "common_name": "green",
+          "gsd": 30,
+          "center_wavelength": 0.56
+        }
+      ]
+    },
+    "red": {
+      "title": "Red Band",
+      "description": "Collection 2 Level-2 Red Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"],
+      "eo:bands": [
+        {
+          "common_name": "red",
+          "gsd": 30
+        }
+      ]
+    },
+    "nir08": {
+      "title": "Near Infrared Band 0.8",
+      "description": "Collection 2 Level-2 Near Infrared Band 0.8 Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data", "reflectance"],
+      "eo:bands": [
+        {
+          "common_name": "nir08",
+          "gsd": 30
+        }
+      ]
+    },
+    "swir16": {
+      "title": "Short-wave Infrared Band 1.6",
+      "description": "Collection 2 Level-2 Short-wave Infrared Band 1.6 Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data", "reflectance"],
+      "eo:bands": [
+        {
+          "common_name": "swir16",
+          "gsd": 30
+        }
+      ]
+    },
+    "swir22": {
+      "title": "Short-wave Infrared Band 2.2 (B7)",
+      "description": "Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data", "reflectance"],
+      "eo:bands": [
+        {
+          "name": "B7",
+          "common_name": "swir22",
+          "gsd": 30
+        }
+      ]
+    },
+    "qa_aerosol": {
+      "title": "Aerosol Quality Analysis Band",
+      "description": "Collection 2 Level-2 Aerosol Quality Analysis Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["metadata", "data-mask", "water-mask"],
+      "classification:bitfields": [
+        {
+          "name": "fill",
+          "description": "Corresponding pixels in L1 image bands are fill",
+          "offset": 0,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_fill",
+              "description": "L1 image band pixels are not fill",
+              "value": 0
+            },
+            {
+              "name": "fill",
+              "description": "L1 image band pixels are fill",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "retrieval",
+          "description": "Valid aerosol retrieval",
+          "offset": 1,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_valid",
+              "description": "Aerosol retrieval is not valid",
+              "value": 0
+            },
+            {
+              "name": "valid",
+              "description": "Aerosol retrieval is valid",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "water",
+          "description": "Water mask",
+          "offset": 2,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_water",
+              "description": "Not water",
+              "value": 0
+            },
+            {
+              "name": "water",
+              "description": "Water",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 3,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 4,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "interpolated",
+          "description": "Aerosol is interpolated",
+          "offset": 5,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_interpolated",
+              "description": "Aerosol is not interpolated",
+              "value": 0
+            },
+            {
+              "name": "interpolated",
+              "description": "Aerosol is interpolated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "level",
+          "description": "Aerosol level",
+          "offset": 6,
+          "length": 2,
+          "classes": [
+            {
+              "name": "climatology",
+              "description": "No aerosol correction applied",
+              "value": 0
+            },
+            {
+              "name": "low",
+              "description": "Low aerosol level",
+              "value": 1
+            },
+            {
+              "name": "medium",
+              "description": "Medium aerosol level",
+              "value": 2
+            },
+            {
+              "name": "high",
+              "description": "High aerosol level",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    "qa_pixel": {
+      "title": "Pixel Quality Assessment Band",
+      "description": "Collection 2 Level-2 Pixel Quality Assessment Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["cloud", "cloud-shadow", "snow-ice", "water-mask"]
+    },
+    "qa_radsat": {
+      "title": "Radiometric Saturation Quality Assessment Band",
+      "description": "Collection 2 Level-2 Radiometric Saturation Quality Assessment Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["saturation"]
+    },
+    "ANG.txt": {
+      "title": "Angle Coefficients File",
+      "description": "Collection 2 Level-2 Angle Coefficients File (ANG)",
+      "type": "text/plain",
+      "roles": ["metadata"]
+    },
+    "MTL.txt": {
+      "title": "Product Metadata File",
+      "description": "Collection 2 Level-2 Product Metadata File (MTL)",
+      "type": "text/plain",
+      "roles": ["metadata"]
+    },
+    "MTL.xml": {
+      "title": "Product Metadata File (xml)",
+      "type": "application/xml",
+      "roles": ["metadata"]
+    },
+    "atmos_opacity": {
+      "title": "Atmospheric Opacity Band",
+      "description": "Collection 2 Level-2 Atmospheric Opacity Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["data"]
+    },
+    "cloud_qa": {
+      "title": "Cloud Quality Analysis Band",
+      "description": "Collection 2 Level-2 Cloud Quality Opacity Band Surface Reflectance",
+      "type": "image/vnd.stac.geotiff; cloud-optimized=true",
+      "roles": ["metadata", "cloud", "cloud-shadow", "snow-ice", "water-mask"],
+      "classification:bitfields": [
+        {
+          "name": "ddv",
+          "description": "Dark Dense Vegetation",
+          "offset": 0,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_ddv",
+              "description": "Pixel has no DDV",
+              "value": 0
+            },
+            {
+              "name": "ddv",
+              "description": "Pixel has DDV",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "cloud",
+          "description": "Cloud",
+          "offset": 1,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_cloud",
+              "description": "Pixel has no Cloud",
+              "value": 0
+            },
+            {
+              "name": "cloud",
+              "description": "Pixel has Cloud",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "cloud_shadow",
+          "description": "Cloud Shadow",
+          "offset": 2,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_shadow",
+              "description": "Pixel doesn't have cloud shadow",
+              "value": 0
+            },
+            {
+              "name": "cloud",
+              "description": "Pixel has cloud shadow",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "adjacent",
+          "description": "Adjacent to Cloud",
+          "offset": 3,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_adjacent",
+              "description": "Pixel not adjacent to cloud",
+              "value": 0
+            },
+            {
+              "name": "adjacent",
+              "description": "Pixel adjacent to cloud",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "snow",
+          "description": "Snow",
+          "offset": 4,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_snow",
+              "description": "Pixel is not snow",
+              "value": 0
+            },
+            {
+              "name": "snow",
+              "description": "Pixel is snow",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "water",
+          "description": "Water",
+          "offset": 5,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_water",
+              "description": "Pixel is not water",
+              "value": 0
+            },
+            {
+              "name": "water",
+              "description": "Pixel is water",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 6,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 7,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "assets": {},
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/Landsat_Data_Policy.pdf",
+      "type": "application/pdf",
+      "title": "Landsat Data Policy"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5066/P9OGBGM6",
+      "title": "Landsat 8-9 OLI/TIRS Collection 2 Level-2"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5066/P9C7I13B",
+      "title": "Landsat 7 ETM+ Collection 2 Level-2"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5066/P9IAXOVV",
+      "title": "Landsat 4-5 TM Collection 2 Level-2"
+    },
+    {
+      "rel": "about",
+      "href": "https://landsatlook.usgs.gov/stac-server",
+      "title": "USGS landsatlook STAC API"
+    }
+  ]
+}
