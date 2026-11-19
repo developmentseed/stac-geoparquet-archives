@@ -1,0 +1,74 @@
+{
+  "source_collection": "sentinel-2-l2a",
+  "years": [2023, 2024],
+  "compression": "zstd",
+  "compression_level": 3,
+  "parquet_version": "2.6",
+  "data_page_version": "1.0",
+  "write_page_index": false,
+  "write_statistics": true,
+  "use_dictionary": true,
+  "query": {
+    "bbox": [-109.0, 37.0, -102.0, 41.0],
+    "week_start": "2024-06-01T00:00:00Z",
+    "week_end": "2024-06-08T00:00:00Z",
+    "year_start": "2024-01-01T00:00:00Z",
+    "year_end": "2025-01-01T00:00:00Z",
+    "month_start": "2024-06-01T00:00:00Z",
+    "month_end": "2024-07-01T00:00:00Z",
+    "day_start": "2024-06-01T00:00:00Z",
+    "day_end": "2024-06-02T00:00:00Z",
+    "tile": "13TCF",
+    "max_cloud_cover": 20.0
+  },
+  "layouts": [
+    {
+      "id": "A",
+      "granularity": "month",
+      "row_group_size": 125000,
+      "sort": "tile"
+    },
+    {
+      "id": "B",
+      "granularity": "quarter",
+      "row_group_size": 125000,
+      "sort": "tile"
+    },
+    {
+      "id": "C",
+      "granularity": "year",
+      "row_group_size": 125000,
+      "sort": "tile"
+    },
+    {
+      "id": "D",
+      "granularity": "month",
+      "row_group_size": 10000,
+      "sort": "tile"
+    },
+    {
+      "id": "E",
+      "granularity": "month",
+      "row_group_size": 125000,
+      "sort": "hilbert"
+    },
+    {
+      "id": "F",
+      "granularity": "unpartitioned",
+      "row_group_size": 125000,
+      "sort": "tile"
+    },
+    {
+      "id": "G",
+      "granularity": "month",
+      "row_group_size": 500000,
+      "sort": "tile"
+    },
+    {
+      "id": "H",
+      "granularity": "month",
+      "row_group_size": 125000,
+      "sort": "datetime"
+    }
+  ]
+}
