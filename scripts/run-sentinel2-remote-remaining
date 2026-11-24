@@ -1,0 +1,31 @@
+#!/bin/zsh
+set -euo pipefail
+
+prefix=stac-geoparquet/sentinel-2-layout-benchmark-2023-2024-dd27913
+public_prefix=developmentseed/$prefix
+
+retry() {
+  local attempt=1
+  while (( attempt <= 8 )); do
+    if "$@"; then
+      return 0
+    fi
+    print -r -- "$(date -u +%FT%TZ) command failed (attempt $attempt/8)"
+    if (( attempt == 8 )); then
+      return 1
+    fi
+    sleep 60
+    attempt=$((attempt + 1))
+  done
+}
+
+for layout in E G H; do
+  print -r -- "$(date -u +%FT%TZ) publishing $layout"
+  retry .venv/bin/python -m stac_geoparquet_archives.benchmark.remote_publish \
+    --prefix "$prefix" --layout "$layout" --resume
+  print -r -- "$(date -u +%FT%TZ) measuring $layout"
+  retry .venv/bin/python -m stac_geoparquet_archives.benchmark.remote run \
+    --prefix "$public_prefix" --layout "$layout" --repeats 5 --resume
+done
+
+print -r -- "$(date -u +%FT%TZ) remote benchmark complete"

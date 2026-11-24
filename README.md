@@ -10,6 +10,8 @@ The STAC catalog and collections live in [catalog/](./catalog/catalog.json).
 
 The [benchmark plan](docs/sentinel-2-layout-benchmark.md) records the eight
 first-pass layouts, the source inventory, fixed queries, and measurement limits.
+The [remote follow-up](docs/sentinel-2-remote-benchmark.md) reports results for
+five layouts, the upload command, and remote I/O instrumentation.
 The generator uses one layout directory at a time and deletes that generated
 directory after both engines finish. It never deletes the source snapshot.
 

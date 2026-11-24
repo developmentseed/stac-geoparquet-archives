@@ -19,6 +19,7 @@ benchmark = [
     "pyarrow>=25.0.0",
     "psutil>=7.0.0",
     "pytz>=2025.2",
+    "boto3>=1.44.6",
 ]
 
 [project.scripts]
