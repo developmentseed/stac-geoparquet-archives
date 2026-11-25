@@ -3,7 +3,7 @@
 ## What we tested
 
 We compared five ways to store Sentinel-2 L2A STAC items as GeoParquet. A
-*layout* sets the time span of each file, the number of items in each Parquet
+_layout_ sets the time span of each file, the number of items in each Parquet
 row group, and the order of items within a file. Time partitions determine how
 many files a search opens and how much data an update rewrites. Row groups and
 sort order determine how much data a reader can skip inside those files.
@@ -31,13 +31,13 @@ it excludes temporary sorting I/O and the small catalog and manifest rewrite.
 MGRS is Sentinel-2's tile grid. Hilbert order clusters nearby item bbox centers.
 Every sort uses item `id` to break ties.
 
-| Layout | Time per file | Rows per group | Order within each file | Files | December append write |
-| --- | --- | ---: | --- | ---: | --- |
-| A | Month | 125,000 | MGRS tile, then time | 24 | 140 MB; no prior file rewritten |
-| B | Quarter | 125,000 | MGRS tile, then time | 8 | 410 MB; quarter file rewritten |
-| E | Month | 125,000 | Hilbert bbox position, then time | 24 | 145 MB; no prior file rewritten |
-| G | Month | 500,000 | MGRS tile, then time | 24 | 137 MB; no prior file rewritten |
-| H | Month | 125,000 | Time | 24 | 143 MB; no prior file rewritten |
+| Layout | Time per file | Rows per group | Order within each file           | Files | December append write           |
+| ------ | ------------- | -------------: | -------------------------------- | ----: | ------------------------------- |
+| A      | Month         |        125,000 | MGRS tile, then time             |    24 | 140 MB; no prior file rewritten |
+| B      | Quarter       |        125,000 | MGRS tile, then time             |     8 | 410 MB; quarter file rewritten  |
+| E      | Month         |        125,000 | Hilbert bbox position, then time |    24 | 145 MB; no prior file rewritten |
+| G      | Month         |        500,000 | MGRS tile, then time             |    24 | 137 MB; no prior file rewritten |
+| H      | Month         |        125,000 | Time                             |    24 | 143 MB; no prior file rewritten |
 
 ## Results
 
@@ -48,25 +48,25 @@ it is not a full row scan.
 
 ### DuckDB
 
-| Query | A | B | E | G | H |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Small bbox, one week | 3.53 | 5.27 | 3.09 | 5.20 | 3.16 |
-| Small bbox, one year | 33.62 | 11.76 | 13.76 | 37.40 | 51.39 |
-| Tile series, both years | 7.88 | 6.54 | 7.98 | 5.95 | 20.91 |
-| Bbox and cloud filter, one month | 4.41 | 5.71 | 2.77 | 6.01 | 8.67 |
-| Global, one day | 3.63 | 2.78 | 2.44 | 2.81 | 2.59 |
-| Full collection count | 6.47 | 5.92 | 5.01 | 4.61 | 5.75 |
+| Query                            |     A |     B |     E |     G |     H |
+| -------------------------------- | ----: | ----: | ----: | ----: | ----: |
+| Small bbox, one week             |  3.53 |  5.27 |  3.09 |  5.20 |  3.16 |
+| Small bbox, one year             | 33.62 | 11.76 | 13.76 | 37.40 | 51.39 |
+| Tile series, both years          |  7.88 |  6.54 |  7.98 |  5.95 | 20.91 |
+| Bbox and cloud filter, one month |  4.41 |  5.71 |  2.77 |  6.01 |  8.67 |
+| Global, one day                  |  3.63 |  2.78 |  2.44 |  2.81 |  2.59 |
+| Full collection count            |  6.47 |  5.92 |  5.01 |  4.61 |  5.75 |
 
 ### PyArrow
 
-| Query | A | B | E | G | H |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Small bbox, one week | 5.27 | 6.08 | 5.27 | 6.14 | 6.35 |
-| Small bbox, one year | 30.30 | 16.14 | 29.16 | 40.99 | 54.73 |
-| Tile series, both years | 50.33 | 14.40 | 44.76 | 45.29 | 56.13 |
-| Bbox and cloud filter, one month | 5.94 | 6.33 | 5.33 | 7.96 | 8.14 |
-| Global, one day | 4.99 | 4.68 | 4.87 | 4.95 | 3.00 |
-| Full collection count | 56.43 | 13.81 | 40.41 | 37.81 | 28.75 |
+| Query                            |     A |     B |     E |     G |     H |
+| -------------------------------- | ----: | ----: | ----: | ----: | ----: |
+| Small bbox, one week             |  5.27 |  6.08 |  5.27 |  6.14 |  6.35 |
+| Small bbox, one year             | 30.30 | 16.14 | 29.16 | 40.99 | 54.73 |
+| Tile series, both years          | 50.33 | 14.40 | 44.76 | 45.29 | 56.13 |
+| Bbox and cloud filter, one month |  5.94 |  6.33 |  5.33 |  7.96 |  8.14 |
+| Global, one day                  |  4.99 |  4.68 |  4.87 |  4.95 |  3.00 |
+| Full collection count            | 56.43 | 13.81 | 40.41 | 37.81 | 28.75 |
 
 ## Takeaways
 
