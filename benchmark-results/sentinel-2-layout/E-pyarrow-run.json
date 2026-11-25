@@ -1,0 +1,576 @@
+{
+  "dataset_name": "E",
+  "dataset_path": "data/benchmark-work/E",
+  "timestamp": "2026-11-18T04:52:24.004078+00:00",
+  "engine": "pyarrow",
+  "engine_version": "26.0.1",
+  "repeats": 5,
+  "suite": "sentinel2_layout",
+  "run_kind": "full",
+  "params": {
+    "bbox": [
+      -109.0,
+      37.0,
+      -102.0,
+      41.0
+    ],
+    "week_start": "2024-06-01T00:00:00Z",
+    "week_end": "2024-06-08T00:00:00Z",
+    "year_start": "2024-01-01T00:00:00Z",
+    "year_end": "2025-01-01T00:00:00Z",
+    "month_start": "2024-06-01T00:00:00Z",
+    "month_end": "2024-07-01T00:00:00Z",
+    "day_start": "2024-06-01T00:00:00Z",
+    "day_end": "2024-06-02T00:00:00Z",
+    "tile": "13TCF",
+    "max_cloud_cover": 20.0
+  },
+  "layout": {
+    "id": "E",
+    "granularity": "month",
+    "row_group_size": 125000,
+    "sort": "hilbert"
+  },
+  "source_files": [
+    "data/benchmark-source/part-0090_2023-01-01T00:20:19.024000+00:00_2023-01-31T23:51:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0091_2023-02-01T00:04:29.024000+00:00_2023-02-28T23:56:11.024001+00:00.parquet",
+    "data/benchmark-source/part-0092_2023-03-01T00:20:51.024000+00:00_2023-03-31T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0093_2023-04-01T00:11:59.024000+00:00_2023-04-30T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0094_2023-05-01T00:11:49.024000+00:00_2023-05-31T23:51:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0095_2023-06-01T00:04:39.024000+00:00_2023-06-30T23:51:39.024001+00:00.parquet",
+    "data/benchmark-source/part-0096_2023-07-01T00:04:39.024000+00:00_2023-07-31T23:38:19.024001+00:00.parquet",
+    "data/benchmark-source/part-0097_2023-08-01T00:01:51.024000+00:00_2023-08-31T23:57:41.024001+00:00.parquet",
+    "data/benchmark-source/part-0098_2023-09-01T00:01:21.024000+00:00_2023-09-30T23:57:41.024001+00:00.parquet",
+    "data/benchmark-source/part-0099_2023-10-01T00:01:21.024000+00:00_2023-10-31T23:57:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0100_2023-11-01T00:10:19.024000+00:00_2023-11-30T23:59:39.024001+00:00.parquet",
+    "data/benchmark-source/part-0101_2023-12-01T00:10:09.024000+00:00_2023-12-31T23:52:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0102_2024-01-01T00:07:49.024000+00:00_2024-01-31T23:51:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0103_2024-02-01T00:00:11.024000+00:00_2024-02-29T23:52:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0104_2024-03-01T00:07:49.024000+00:00_2024-03-31T23:51:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0105_2024-04-01T00:04:31.024000+00:00_2024-04-30T23:51:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0106_2024-05-01T00:07:31.024000+00:00_2024-05-31T23:38:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0107_2024-06-01T00:01:39.024000+00:00_2024-06-30T23:38:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0108_2024-07-01T00:01:49.024000+00:00_2024-07-31T23:57:39.024001+00:00.parquet",
+    "data/benchmark-source/part-0109_2024-08-01T00:01:19.024000+00:00_2024-08-31T23:56:11.024001+00:00.parquet",
+    "data/benchmark-source/part-0110_2024-09-01T00:17:21.024000+00:00_2024-09-30T23:56:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0111_2024-10-01T00:14:31.024000+00:00_2024-10-31T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0112_2024-11-01T00:16:49.024000+00:00_2024-11-30T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0113_2024-12-01T00:07:51.024000+00:00_2024-12-31T23:51:29.024001+00:00.parquet"
+  ],
+  "source_item_count": 11318221,
+  "writer": {
+    "compression": "zstd",
+    "compression_level": 3,
+    "parquet_version": "2.6",
+    "data_page_version": "1.0",
+    "write_page_index": false,
+    "write_statistics": true,
+    "use_dictionary": true,
+    "pyarrow_version": "26.0.1",
+    "duckdb_version": "2.0.0",
+    "sort_memory_limit": "8GB",
+    "sort_temp_limit": "30GB",
+    "sort_threads": 2
+  },
+  "files": [
+    {
+      "path": "data/benchmark-work/E/year=2023/month=01/sentinel-2-l2a-2023-01.parquet",
+      "item_count": 464849,
+      "row_groups": 4,
+      "size_bytes": 269850982,
+      "min_datetime": "2023-01-01T00:20:19.024000Z",
+      "max_datetime": "2023-01-31T23:51:29.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.8518939,
+        183.70222,
+        67.8082536
+      ],
+      "sha256": "801c77aaf12510278db90102693af76228fec402234d4c2eac72ff5f2e321666"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=02/sentinel-2-l2a-2023-02.parquet",
+      "item_count": 478693,
+      "row_groups": 4,
+      "size_bytes": 280311027,
+      "min_datetime": "2023-02-01T00:04:29.024000Z",
+      "max_datetime": "2023-02-28T23:56:11.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.85166779,
+        183.70244,
+        77.2300618
+      ],
+      "sha256": "4b2be86660f7612977c6495590b1a07ff86f07feab5fbc22b57a2e791391d46a"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=03/sentinel-2-l2a-2023-03.parquet",
+      "item_count": 725448,
+      "row_groups": 6,
+      "size_bytes": 376264091,
+      "min_datetime": "2023-03-01T00:20:51.024000Z",
+      "max_datetime": "2023-03-31T23:52:31.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.84506463,
+        183.69968,
+        82.8166843
+      ],
+      "sha256": "14d9a3ce1d93dc78c7bf8a17d62df0b66bd2457651e26e9dad992a89ba407a74"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=04/sentinel-2-l2a-2023-04.parquet",
+      "item_count": 688161,
+      "row_groups": 6,
+      "size_bytes": 361878985,
+      "min_datetime": "2023-04-01T00:11:59.024000Z",
+      "max_datetime": "2023-04-30T23:52:31.024000Z",
+      "bbox": [
+        -181.156067,
+        -74.4047416,
+        181.17986,
+        82.818999
+      ],
+      "sha256": "3ab38d0e2dc8ddf25cb09f9839814aefed266b0fdbbea2f2e77ebccc39c7edd4"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=05/sentinel-2-l2a-2023-05.parquet",
+      "item_count": 559208,
+      "row_groups": 5,
+      "size_bytes": 306936361,
+      "min_datetime": "2023-05-01T00:11:49.024000Z",
+      "max_datetime": "2023-05-31T23:51:29.024000Z",
+      "bbox": [
+        -181.2222217,
+        -65.0756289,
+        181.18011,
+        82.8148924
+      ],
+      "sha256": "f94f87faf74d7fc29c0908a144753a4bf29b425c2a169b65dd3055b93dbcfedd"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=06/sentinel-2-l2a-2023-06.parquet",
+      "item_count": 683000,
+      "row_groups": 6,
+      "size_bytes": 349718469,
+      "min_datetime": "2023-06-01T00:04:39.024000Z",
+      "max_datetime": "2023-06-30T23:51:39.024000Z",
+      "bbox": [
+        -181.1423551,
+        -55.1147644,
+        181.18005,
+        82.8146828
+      ],
+      "sha256": "8178b56ec35901fa7674a4906ce10b42597c014ee9a959dae29575e2360e563f"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=07/sentinel-2-l2a-2023-07.parquet",
+      "item_count": 686130,
+      "row_groups": 6,
+      "size_bytes": 355037320,
+      "min_datetime": "2023-07-01T00:04:39.024000Z",
+      "max_datetime": "2023-07-31T23:38:19.024000Z",
+      "bbox": [
+        -181.1423149,
+        -60.62341864,
+        181.18008,
+        82.81553102
+      ],
+      "sha256": "d50877945629da628b8331ab6f7bcfb075759369fa8f7431d2145a12daf78522"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=08/sentinel-2-l2a-2023-08.parquet",
+      "item_count": 747929,
+      "row_groups": 6,
+      "size_bytes": 380062403,
+      "min_datetime": "2023-08-01T00:01:51.024000Z",
+      "max_datetime": "2023-08-31T23:57:41.024000Z",
+      "bbox": [
+        -181.1120406,
+        -71.1764929,
+        181.17976,
+        82.8180058
+      ],
+      "sha256": "3ce9eca60720cc61fa585862b7052dd43047b2e2419423182bf8e2ff58317256"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=09/sentinel-2-l2a-2023-09.parquet",
+      "item_count": 665388,
+      "row_groups": 6,
+      "size_bytes": 348562752,
+      "min_datetime": "2023-09-01T00:01:21.024000Z",
+      "max_datetime": "2023-09-30T23:57:41.024000Z",
+      "bbox": [
+        -181.1426354,
+        -81.01781212,
+        181.52963,
+        82.819285
+      ],
+      "sha256": "81d78b386a07469c61215d6edb325b11a5bb257aef7dfe512179756793d79d23"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=10/sentinel-2-l2a-2023-10.parquet",
+      "item_count": 548866,
+      "row_groups": 5,
+      "size_bytes": 301134339,
+      "min_datetime": "2023-10-01T00:01:21.024000Z",
+      "max_datetime": "2023-10-31T23:57:29.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.84975922,
+        183.69673,
+        80.83975313
+      ],
+      "sha256": "705266d5f04847529d69cc0cee36b37481d703f4f3ac3378ecd54ba6418cb903"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=11/sentinel-2-l2a-2023-11.parquet",
+      "item_count": 482242,
+      "row_groups": 4,
+      "size_bytes": 254198484,
+      "min_datetime": "2023-11-01T00:10:19.024000Z",
+      "max_datetime": "2023-11-30T23:59:39.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.8517094,
+        183.7023,
+        70.801173
+      ],
+      "sha256": "47d7b384521a4bd64b8edc684ea1f3ddfa14289571ab8fe94a3b9fde6c6f8828"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2023/month=12/sentinel-2-l2a-2023-12.parquet",
+      "item_count": 352465,
+      "row_groups": 3,
+      "size_bytes": 200747143,
+      "min_datetime": "2023-12-01T00:10:09.024000Z",
+      "max_datetime": "2023-12-31T23:52:29.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.84808693,
+        183.69644,
+        63.32437301
+      ],
+      "sha256": "4f9a11eb5e65026ef2ad4aee315162a810fe8b72f0e24de7f2996b19e9284955"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=01/sentinel-2-l2a-2024-01.parquet",
+      "item_count": 297467,
+      "row_groups": 3,
+      "size_bytes": 178670287,
+      "min_datetime": "2024-01-01T00:07:49.024000Z",
+      "max_datetime": "2024-01-31T23:51:21.024000Z",
+      "bbox": [
+        -183.0012944,
+        -82.84969589,
+        183.67227,
+        68.11548806
+      ],
+      "sha256": "8cfd74f278093043882899bbd43a515926de4c9aa8bfc414ca369ed8476e0617"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=02/sentinel-2-l2a-2024-02.parquet",
+      "item_count": 339996,
+      "row_groups": 3,
+      "size_bytes": 199059858,
+      "min_datetime": "2024-02-01T00:00:11.024000Z",
+      "max_datetime": "2024-02-29T23:52:29.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.8496179,
+        183.67322,
+        77.5375276
+      ],
+      "sha256": "3311f5cfcbb23b0fee5e6dd30ec1b89234d14468ab717f72cdad6d81a9094a70"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=03/sentinel-2-l2a-2024-03.parquet",
+      "item_count": 379543,
+      "row_groups": 4,
+      "size_bytes": 233257557,
+      "min_datetime": "2024-03-01T00:07:49.024000Z",
+      "max_datetime": "2024-03-31T23:51:31.024000Z",
+      "bbox": [
+        -182.6323304,
+        -82.7310381,
+        182.3094,
+        82.81583798
+      ],
+      "sha256": "d55cd7c5b3efc8c72e6433344b0f47fe1b4ea9b3df7a4990251ee731cc142341"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=04/sentinel-2-l2a-2024-04.parquet",
+      "item_count": 378030,
+      "row_groups": 4,
+      "size_bytes": 228532313,
+      "min_datetime": "2024-04-01T00:04:31.024000Z",
+      "max_datetime": "2024-04-30T23:51:31.024000Z",
+      "bbox": [
+        -181.1410917,
+        -73.9814236,
+        181.0303,
+        82.81897306
+      ],
+      "sha256": "e294efe0f1d60821bcaf0bc19e74a1fbcf2e493e81c64a31de8349f46c6e15a5"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=05/sentinel-2-l2a-2024-05.parquet",
+      "item_count": 390208,
+      "row_groups": 4,
+      "size_bytes": 232912968,
+      "min_datetime": "2024-05-01T00:07:31.024000Z",
+      "max_datetime": "2024-05-31T23:38:21.024000Z",
+      "bbox": [
+        -181.1411077,
+        -64.2142051,
+        181.17986,
+        82.8142051
+      ],
+      "sha256": "85c8d0894de6f08999b25b2fa207c00e5405351fe0137bab671f9e5adf887cb2"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=06/sentinel-2-l2a-2024-06.parquet",
+      "item_count": 392845,
+      "row_groups": 4,
+      "size_bytes": 237450748,
+      "min_datetime": "2024-06-01T00:01:39.024000Z",
+      "max_datetime": "2024-06-30T23:38:21.024000Z",
+      "bbox": [
+        -181.1423638,
+        -54.9642159,
+        181.18004,
+        82.8143531
+      ],
+      "sha256": "823ead961c1d5cdd0ae0e84747f980c6f39fd83d1ed28f7f8217d94db0d714cc"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=07/sentinel-2-l2a-2024-07.parquet",
+      "item_count": 394316,
+      "row_groups": 4,
+      "size_bytes": 229828446,
+      "min_datetime": "2024-07-01T00:01:49.024000Z",
+      "max_datetime": "2024-07-31T23:57:39.024000Z",
+      "bbox": [
+        -181.1421642,
+        -61.0577363,
+        181.18007,
+        82.8156737
+      ],
+      "sha256": "b884a9ecebed9b5c98c6847a2868e6114c2002caed8b8ef5b37aa6e5b9a81657"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=08/sentinel-2-l2a-2024-08.parquet",
+      "item_count": 386222,
+      "row_groups": 4,
+      "size_bytes": 172132850,
+      "min_datetime": "2024-08-01T00:01:19.024000Z",
+      "max_datetime": "2024-08-31T23:56:11.024000Z",
+      "bbox": [
+        -181.3070784,
+        -70.9921606,
+        181.1794034,
+        82.8180014
+      ],
+      "sha256": "02118ed9fce00649f8291c3898c98abb4797a59eb0a558d1d1e01af413a4b253"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=09/sentinel-2-l2a-2024-09.parquet",
+      "item_count": 284256,
+      "row_groups": 3,
+      "size_bytes": 130772256,
+      "min_datetime": "2024-09-01T00:17:21.024000Z",
+      "max_datetime": "2024-09-30T23:56:21.024000Z",
+      "bbox": [
+        -183.0008956,
+        -81.2571581,
+        182.7885819,
+        82.8197933
+      ],
+      "sha256": "16762835c4da74eff4e5283d658ce698b4fc3404cc6e75510f6cc29788a29f14"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=10/sentinel-2-l2a-2024-10.parquet",
+      "item_count": 358191,
+      "row_groups": 3,
+      "size_bytes": 160927781,
+      "min_datetime": "2024-10-01T00:14:31.024000Z",
+      "max_datetime": "2024-10-31T23:52:31.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.848646,
+        183.6966271,
+        80.5750827
+      ],
+      "sha256": "8941b332fe09df4497a56ffdbce0354116b3a61c2a52f66b1b67497bd4dab4dc"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=11/sentinel-2-l2a-2024-11.parquet",
+      "item_count": 305161,
+      "row_groups": 3,
+      "size_bytes": 138728301,
+      "min_datetime": "2024-11-01T00:16:49.024000Z",
+      "max_datetime": "2024-11-30T23:52:31.024000Z",
+      "bbox": [
+        -183.4473047,
+        -82.8505677,
+        183.6967488,
+        70.660928
+      ],
+      "sha256": "1d9fa323ab38292bb3186ce7af3b537edaf15531522f95bfa6e38bbe49dca018"
+    },
+    {
+      "path": "data/benchmark-work/E/year=2024/month=12/sentinel-2-l2a-2024-12.parquet",
+      "item_count": 329607,
+      "row_groups": 3,
+      "size_bytes": 145489662,
+      "min_datetime": "2024-12-01T00:07:51.024000Z",
+      "max_datetime": "2024-12-31T23:51:29.024000Z",
+      "bbox": [
+        -184.0785819,
+        -82.8472923,
+        183.7026797,
+        63.61882
+      ],
+      "sha256": "595dd2d59988f8ee1718347e049049d9c4847b5a408e84664b6abeda2fd244d9"
+    }
+  ],
+  "storage": "local",
+  "cache_method": "fresh process per repeat; OS file cache not cleared",
+  "results": [
+    {
+      "query": "bbox_week",
+      "rows": 152,
+      "best_seconds": 0.006777249975129962,
+      "median_seconds": 0.007102833013050258,
+      "p95_seconds": 0.007158917188644409,
+      "runs": [
+        0.007169833988882601,
+        0.007115249987691641,
+        0.007102833013050258,
+        0.006870624958537519,
+        0.006777249975129962
+      ],
+      "peak_memory_bytes": 82247680,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "bbox_year",
+      "rows": 7317,
+      "best_seconds": 0.032736458000727,
+      "median_seconds": 0.03286391694564372,
+      "p95_seconds": 0.03406873343046755,
+      "runs": [
+        0.03286391694564372,
+        0.03422925004269928,
+        0.032736458000727,
+        0.03342666698154062,
+        0.03278725000564009
+      ],
+      "peak_memory_bytes": 171802624,
+      "candidate_files": 12,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "tile_timeseries",
+      "rows": 394,
+      "best_seconds": 0.05257275002077222,
+      "median_seconds": 0.05339312506839633,
+      "p95_seconds": 0.05511821717955172,
+      "runs": [
+        0.05553308397065848,
+        0.05345875001512468,
+        0.05261870799586177,
+        0.05257275002077222,
+        0.05339312506839633
+      ],
+      "peak_memory_bytes": 201687040,
+      "candidate_files": 24,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "bbox_month_cloud",
+      "rows": 366,
+      "best_seconds": 0.007028291933238506,
+      "median_seconds": 0.007133624982088804,
+      "p95_seconds": 0.0072925250278785825,
+      "runs": [
+        0.0070896659744903445,
+        0.00731587503105402,
+        0.007133624982088804,
+        0.007028291933238506,
+        0.007199125015176833
+      ],
+      "peak_memory_bytes": 85573632,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "global_day",
+      "rows": 12826,
+      "best_seconds": 0.003877416020259261,
+      "median_seconds": 0.0040160000789910555,
+      "p95_seconds": 0.004285742295905948,
+      "runs": [
+        0.004074875032529235,
+        0.003937792032957077,
+        0.003877416020259261,
+        0.0040160000789910555,
+        0.004338459111750126
+      ],
+      "peak_memory_bytes": 75792384,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "full_collection_count",
+      "rows": 11318221,
+      "best_seconds": 0.0354113751091063,
+      "median_seconds": 0.035511541995219886,
+      "p95_seconds": 0.03586093354970217,
+      "runs": [
+        0.03588316694367677,
+        0.03577199997380376,
+        0.035511541995219886,
+        0.0354113751091063,
+        0.03550229093525559
+      ],
+      "peak_memory_bytes": 113934336,
+      "candidate_files": 24,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    }
+  ],
+  "append": {
+    "month": "2024-12",
+    "parquet_bytes_written": 145489662,
+    "parquet_files_rewritten": 0,
+    "previous_file_bytes_rewritten": 0,
+    "staging_chunk_bytes_written": 0,
+    "metadata_files_rewritten": 2,
+    "metadata_bytes_written": 10790,
+    "total_files_rewritten": 2,
+    "total_bytes_written": 145500452,
+    "before": {
+      "file_count": 23,
+      "collection_json_bytes": 5007,
+      "manifest_bytes": 5497
+    },
+    "after": {
+      "file_count": 24,
+      "collection_json_bytes": 5203,
+      "manifest_bytes": 5587
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "dataset_name": "F",
+  "dataset_path": "data/benchmark-work/F",
+  "timestamp": "2026-11-18T05:19:35.778423+00:00",
+  "engine": "duckdb",
+  "engine_version": "2.0.0",
+  "repeats": 5,
+  "suite": "sentinel2_layout",
+  "run_kind": "full",
+  "params": {
+    "bbox": [
+      -109.0,
+      37.0,
+      -102.0,
+      41.0
+    ],
+    "week_start": "2024-06-01T00:00:00Z",
+    "week_end": "2024-06-08T00:00:00Z",
+    "year_start": "2024-01-01T00:00:00Z",
+    "year_end": "2025-01-01T00:00:00Z",
+    "month_start": "2024-06-01T00:00:00Z",
+    "month_end": "2024-07-01T00:00:00Z",
+    "day_start": "2024-06-01T00:00:00Z",
+    "day_end": "2024-06-02T00:00:00Z",
+    "tile": "13TCF",
+    "max_cloud_cover": 20.0
+  },
+  "layout": {
+    "id": "F",
+    "granularity": "unpartitioned",
+    "row_group_size": 125000,
+    "sort": "tile"
+  },
+  "source_files": [
+    "data/benchmark-source/part-0090_2023-01-01T00:20:19.024000+00:00_2023-01-31T23:51:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0091_2023-02-01T00:04:29.024000+00:00_2023-02-28T23:56:11.024001+00:00.parquet",
+    "data/benchmark-source/part-0092_2023-03-01T00:20:51.024000+00:00_2023-03-31T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0093_2023-04-01T00:11:59.024000+00:00_2023-04-30T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0094_2023-05-01T00:11:49.024000+00:00_2023-05-31T23:51:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0095_2023-06-01T00:04:39.024000+00:00_2023-06-30T23:51:39.024001+00:00.parquet",
+    "data/benchmark-source/part-0096_2023-07-01T00:04:39.024000+00:00_2023-07-31T23:38:19.024001+00:00.parquet",
+    "data/benchmark-source/part-0097_2023-08-01T00:01:51.024000+00:00_2023-08-31T23:57:41.024001+00:00.parquet",
+    "data/benchmark-source/part-0098_2023-09-01T00:01:21.024000+00:00_2023-09-30T23:57:41.024001+00:00.parquet",
+    "data/benchmark-source/part-0099_2023-10-01T00:01:21.024000+00:00_2023-10-31T23:57:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0100_2023-11-01T00:10:19.024000+00:00_2023-11-30T23:59:39.024001+00:00.parquet",
+    "data/benchmark-source/part-0101_2023-12-01T00:10:09.024000+00:00_2023-12-31T23:52:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0102_2024-01-01T00:07:49.024000+00:00_2024-01-31T23:51:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0103_2024-02-01T00:00:11.024000+00:00_2024-02-29T23:52:29.024001+00:00.parquet",
+    "data/benchmark-source/part-0104_2024-03-01T00:07:49.024000+00:00_2024-03-31T23:51:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0105_2024-04-01T00:04:31.024000+00:00_2024-04-30T23:51:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0106_2024-05-01T00:07:31.024000+00:00_2024-05-31T23:38:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0107_2024-06-01T00:01:39.024000+00:00_2024-06-30T23:38:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0108_2024-07-01T00:01:49.024000+00:00_2024-07-31T23:57:39.024001+00:00.parquet",
+    "data/benchmark-source/part-0109_2024-08-01T00:01:19.024000+00:00_2024-08-31T23:56:11.024001+00:00.parquet",
+    "data/benchmark-source/part-0110_2024-09-01T00:17:21.024000+00:00_2024-09-30T23:56:21.024001+00:00.parquet",
+    "data/benchmark-source/part-0111_2024-10-01T00:14:31.024000+00:00_2024-10-31T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0112_2024-11-01T00:16:49.024000+00:00_2024-11-30T23:52:31.024001+00:00.parquet",
+    "data/benchmark-source/part-0113_2024-12-01T00:07:51.024000+00:00_2024-12-31T23:51:29.024001+00:00.parquet"
+  ],
+  "source_item_count": 11318221,
+  "writer": {
+    "compression": "zstd",
+    "compression_level": 3,
+    "parquet_version": "2.6",
+    "data_page_version": "1.0",
+    "write_page_index": false,
+    "write_statistics": true,
+    "use_dictionary": true,
+    "pyarrow_version": "26.0.1",
+    "duckdb_version": "2.0.0",
+    "sort_memory_limit": "16GB",
+    "sort_temp_limit": "30GB",
+    "sort_threads": 1
+  },
+  "files": [
+    {
+      "path": "data/benchmark-work/F/sentinel-2-l2a-all.parquet",
+      "item_count": 11318221,
+      "row_groups": 91,
+      "size_bytes": 6262069128,
+      "min_datetime": "2023-01-01T00:20:19.024000Z",
+      "max_datetime": "2024-12-31T23:51:29.024000Z",
+      "bbox": [
+        -184.0785819,
+        -82.8518939,
+        183.7026797,
+        82.8197933
+      ],
+      "sha256": "56a2e6b90d9b055324da1f97e0a92a2683036a49871f98822a27922791f015eb"
+    }
+  ],
+  "storage": "local",
+  "cache_method": "fresh process per repeat; OS file cache not cleared",
+  "results": [
+    {
+      "query": "bbox_week",
+      "rows": 152,
+      "best_seconds": 0.06797112501226366,
+      "median_seconds": 0.0685510829789564,
+      "p95_seconds": 0.08507391614839434,
+      "runs": [
+        0.08899341593496501,
+        0.06939591700211167,
+        0.0685510829789564,
+        0.06797112501226366,
+        0.06802091689314693
+      ],
+      "peak_memory_bytes": 170262528,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "bbox_year",
+      "rows": 7317,
+      "best_seconds": 0.06775841594208032,
+      "median_seconds": 0.06834629201330245,
+      "p95_seconds": 0.06936616622842848,
+      "runs": [
+        0.06956179102417082,
+        0.06858366704545915,
+        0.06793745793402195,
+        0.06775841594208032,
+        0.06834629201330245
+      ],
+      "peak_memory_bytes": 170229760,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "tile_timeseries",
+      "rows": 394,
+      "best_seconds": 0.06348754209466279,
+      "median_seconds": 0.06442545808386058,
+      "p95_seconds": 0.06504494997207075,
+      "runs": [
+        0.06514199997764081,
+        0.06465674994979054,
+        0.06442545808386058,
+        0.06348754209466279,
+        0.06394629192072898
+      ],
+      "peak_memory_bytes": 131727360,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "bbox_month_cloud",
+      "rows": 366,
+      "best_seconds": 0.06952525000087917,
+      "median_seconds": 0.07024683302734047,
+      "p95_seconds": 0.07062021673191339,
+      "runs": [
+        0.07069562491960824,
+        0.07024683302734047,
+        0.06952525000087917,
+        0.06985416600946337,
+        0.070318583981134
+      ],
+      "peak_memory_bytes": 182304768,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "global_day",
+      "rows": 12826,
+      "best_seconds": 0.0675309159560129,
+      "median_seconds": 0.06788033293560147,
+      "p95_seconds": 0.0684771921718493,
+      "runs": [
+        0.06788033293560147,
+        0.0675309159560129,
+        0.06770158396102488,
+        0.06854170898441225,
+        0.06821912492159754
+      ],
+      "peak_memory_bytes": 150683648,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "full_collection_count",
+      "rows": 11318221,
+      "best_seconds": 0.06196416600141674,
+      "median_seconds": 0.06252404197584838,
+      "p95_seconds": 0.06338549200445413,
+      "runs": [
+        0.06353166699409485,
+        0.06280079204589128,
+        0.06196416600141674,
+        0.06216304190456867,
+        0.06252404197584838
+      ],
+      "peak_memory_bytes": 128106496,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    }
+  ],
+  "append": {
+    "month": "2024-12",
+    "parquet_bytes_written": 6262069128,
+    "parquet_files_rewritten": 1,
+    "previous_file_bytes_rewritten": 6099249257,
+    "staging_chunk_bytes_written": 139820257,
+    "metadata_files_rewritten": 2,
+    "metadata_bytes_written": 4036,
+    "total_files_rewritten": 3,
+    "total_bytes_written": 6262073164,
+    "before": {
+      "file_count": 1,
+      "collection_json_bytes": 668,
+      "manifest_bytes": 3373
+    },
+    "after": {
+      "file_count": 1,
+      "collection_json_bytes": 668,
+      "manifest_bytes": 3368
+    }
+  }
+}

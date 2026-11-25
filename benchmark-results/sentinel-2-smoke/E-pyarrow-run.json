@@ -1,0 +1,119 @@
+{
+  "dataset_name": "E",
+  "dataset_path": "data/benchmark-work/E",
+  "timestamp": "2026-11-17T18:45:53.583715+00:00",
+  "engine": "pyarrow",
+  "engine_version": "26.0.1",
+  "repeats": 3,
+  "suite": "sentinel2_layout",
+  "run_kind": "smoke",
+  "params": {
+    "bbox": [
+      -109.0,
+      37.0,
+      -102.0,
+      41.0
+    ],
+    "week_start": "2024-06-01T00:00:00Z",
+    "week_end": "2024-06-08T00:00:00Z",
+    "year_start": "2024-01-01T00:00:00Z",
+    "year_end": "2025-01-01T00:00:00Z",
+    "month_start": "2024-06-01T00:00:00Z",
+    "month_end": "2024-07-01T00:00:00Z",
+    "day_start": "2024-06-01T00:00:00Z",
+    "day_end": "2024-06-02T00:00:00Z",
+    "tile": "13TCF",
+    "max_cloud_cover": 20.0
+  },
+  "layout": {
+    "id": "E",
+    "granularity": "month",
+    "row_group_size": 125000,
+    "sort": "hilbert"
+  },
+  "source_files": [
+    "/tmp/s2-benchmark-smoke-source/part-0107_2024-06-01T00:01:39.024000+00:00_2024-06-30T23:38:21.024001+00:00.parquet"
+  ],
+  "source_item_count": 392845,
+  "writer": {
+    "compression": "zstd",
+    "compression_level": 3,
+    "write_statistics": true,
+    "use_dictionary": true,
+    "pyarrow_version": "26.0.1",
+    "duckdb_version": "2.0.0"
+  },
+  "files": [
+    {
+      "path": "data/benchmark-work/E/year=2024/month=06/sentinel-2-l2a-2024-06.parquet",
+      "item_count": 392845,
+      "row_groups": 4,
+      "size_bytes": 237450300,
+      "min_datetime": "2024-06-01T00:01:39.024000Z",
+      "max_datetime": "2024-06-30T23:38:21.024000Z",
+      "bbox": [
+        -181.1423638,
+        -54.9642159,
+        181.18004,
+        82.8143531
+      ],
+      "sha256": "5627bc35d8ea18c43c7500381d33ff07f68529c0b2366434f614287d9373eb41"
+    }
+  ],
+  "storage": "local",
+  "cache_method": "fresh process per repeat; OS file cache not cleared",
+  "results": [
+    {
+      "query": "bbox_week",
+      "rows": 152,
+      "best_seconds": 0.006640207953751087,
+      "median_seconds": 0.006660292041487992,
+      "p95_seconds": 0.006931566417915746,
+      "runs": [
+        0.006961708015296608,
+        0.006660292041487992,
+        0.006640207953751087
+      ],
+      "peak_memory_bytes": 82329600,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "tile_timeseries",
+      "rows": 12,
+      "best_seconds": 0.004654750053305179,
+      "median_seconds": 0.004705082974396646,
+      "p95_seconds": 0.005099658289691433,
+      "runs": [
+        0.004705082974396646,
+        0.005143499991390854,
+        0.004654750053305179
+      ],
+      "peak_memory_bytes": 77185024,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    },
+    {
+      "query": "global_day",
+      "rows": 12826,
+      "best_seconds": 0.003853166999761015,
+      "median_seconds": 0.003892374981660396,
+      "p95_seconds": 0.0040958506055176255,
+      "runs": [
+        0.003892374981660396,
+        0.003853166999761015,
+        0.004118459008168429
+      ],
+      "peak_memory_bytes": 75890688,
+      "candidate_files": 1,
+      "files_opened": null,
+      "bytes_read": null,
+      "range_requests": null
+    }
+  ],
+  "append": null
+}

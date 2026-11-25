@@ -1,0 +1,222 @@
+{
+  "asset": "abfs://items/sentinel-2-l2a.parquet",
+  "retrieved_at": "2026-11-17T21:31:06.102830+00:00",
+  "files": [
+    {
+      "month": "2023-01",
+      "name": "sentinel-2-l2a.parquet/part-0090_2023-01-01T00:20:19.024000+00:00_2023-01-31T23:51:29.024001+00:00.parquet",
+      "size_bytes": 655119771,
+      "etag": "0x8DF4424FC14C234",
+      "path": "data/benchmark-source/part-0090_2023-01-01T00:20:19.024000+00:00_2023-01-31T23:51:29.024001+00:00.parquet",
+      "sha256": "384e0df51b1a543b0d56d5865f2b3648ae3f1353c2e29587a81444311530fc9f",
+      "item_count": 464849
+    },
+    {
+      "month": "2023-02",
+      "name": "sentinel-2-l2a.parquet/part-0091_2023-02-01T00:04:29.024000+00:00_2023-02-28T23:56:11.024001+00:00.parquet",
+      "size_bytes": 701388389,
+      "etag": "0x8DF44288F2C675C",
+      "path": "data/benchmark-source/part-0091_2023-02-01T00:04:29.024000+00:00_2023-02-28T23:56:11.024001+00:00.parquet",
+      "sha256": "6525390e80ad1267b5960df6690f50ff49878a4095c97ace7e46e5e8ddb24b72",
+      "item_count": 478693
+    },
+    {
+      "month": "2023-03",
+      "name": "sentinel-2-l2a.parquet/part-0092_2023-03-01T00:20:51.024000+00:00_2023-03-31T23:52:31.024001+00:00.parquet",
+      "size_bytes": 973313012,
+      "etag": "0x8DF442DEA073DCC",
+      "path": "data/benchmark-source/part-0092_2023-03-01T00:20:51.024000+00:00_2023-03-31T23:52:31.024001+00:00.parquet",
+      "sha256": "6a5ab5970178bd08c193ea18e4fa0c6cdf6e5b221bfad616b13da4912dcaceca",
+      "item_count": 725448
+    },
+    {
+      "month": "2023-04",
+      "name": "sentinel-2-l2a.parquet/part-0093_2023-04-01T00:11:59.024000+00:00_2023-04-30T23:52:31.024001+00:00.parquet",
+      "size_bytes": 953230039,
+      "etag": "0x8DF4432F2F2BBF4",
+      "path": "data/benchmark-source/part-0093_2023-04-01T00:11:59.024000+00:00_2023-04-30T23:52:31.024001+00:00.parquet",
+      "sha256": "88c6569b1cad96c81bb9a84ecf54048c9ed7a60b73ee338c7c6b2d6dee722afa",
+      "item_count": 688161
+    },
+    {
+      "month": "2023-05",
+      "name": "sentinel-2-l2a.parquet/part-0094_2023-05-01T00:11:49.024000+00:00_2023-05-31T23:51:29.024001+00:00.parquet",
+      "size_bytes": 774358174,
+      "etag": "0x8DF4437114CE364",
+      "path": "data/benchmark-source/part-0094_2023-05-01T00:11:49.024000+00:00_2023-05-31T23:51:29.024001+00:00.parquet",
+      "sha256": "9dab1d9395994b95f658f34659761ac4c75ea6c190badddeef22301f5f4a01b0",
+      "item_count": 559208
+    },
+    {
+      "month": "2023-06",
+      "name": "sentinel-2-l2a.parquet/part-0095_2023-06-01T00:04:39.024000+00:00_2023-06-30T23:51:39.024001+00:00.parquet",
+      "size_bytes": 913690505,
+      "etag": "0x8DF443C03CB01CC",
+      "path": "data/benchmark-source/part-0095_2023-06-01T00:04:39.024000+00:00_2023-06-30T23:51:39.024001+00:00.parquet",
+      "sha256": "521d6b8cb483ecfd90926b003c9d35f942c6c2e477abe7922764d96ff3438824",
+      "item_count": 683000
+    },
+    {
+      "month": "2023-07",
+      "name": "sentinel-2-l2a.parquet/part-0096_2023-07-01T00:04:39.024000+00:00_2023-07-31T23:38:19.024001+00:00.parquet",
+      "size_bytes": 924426677,
+      "etag": "0x8DF4441347B38D8",
+      "path": "data/benchmark-source/part-0096_2023-07-01T00:04:39.024000+00:00_2023-07-31T23:38:19.024001+00:00.parquet",
+      "sha256": "039a4b9a48c51d6106f5482ece2389d9c6e9b93592875953e93bb27e2cc0199c",
+      "item_count": 686130
+    },
+    {
+      "month": "2023-08",
+      "name": "sentinel-2-l2a.parquet/part-0097_2023-08-01T00:01:51.024000+00:00_2023-08-31T23:57:41.024001+00:00.parquet",
+      "size_bytes": 995858546,
+      "etag": "0x8DF4446B1FA8994",
+      "path": "data/benchmark-source/part-0097_2023-08-01T00:01:51.024000+00:00_2023-08-31T23:57:41.024001+00:00.parquet",
+      "sha256": "2e650ccbef31acbb3feec89184be47f772f04346c37025c45318609528129116",
+      "item_count": 747929
+    },
+    {
+      "month": "2023-09",
+      "name": "sentinel-2-l2a.parquet/part-0098_2023-09-01T00:01:21.024000+00:00_2023-09-30T23:57:41.024001+00:00.parquet",
+      "size_bytes": 906211205,
+      "etag": "0x8DF444B81CA519C",
+      "path": "data/benchmark-source/part-0098_2023-09-01T00:01:21.024000+00:00_2023-09-30T23:57:41.024001+00:00.parquet",
+      "sha256": "3158a4ab0de040132306225f4b2d230de3dd4694433327eebe5f306f60f2c9f8",
+      "item_count": 665388
+    },
+    {
+      "month": "2023-10",
+      "name": "sentinel-2-l2a.parquet/part-0099_2023-10-01T00:01:21.024000+00:00_2023-10-31T23:57:29.024001+00:00.parquet",
+      "size_bytes": 767524651,
+      "etag": "0x8DF444F8E24199C",
+      "path": "data/benchmark-source/part-0099_2023-10-01T00:01:21.024000+00:00_2023-10-31T23:57:29.024001+00:00.parquet",
+      "sha256": "1cc6ad84a952210a39a57cbb2ae7efba7406cd0f74a8d72d42ccd45b652d72f3",
+      "item_count": 548866
+    },
+    {
+      "month": "2023-11",
+      "name": "sentinel-2-l2a.parquet/part-0100_2023-11-01T00:10:19.024000+00:00_2023-11-30T23:59:39.024001+00:00.parquet",
+      "size_bytes": 664056226,
+      "etag": "0x8DF44530D4C2A64",
+      "path": "data/benchmark-source/part-0100_2023-11-01T00:10:19.024000+00:00_2023-11-30T23:59:39.024001+00:00.parquet",
+      "sha256": "a89828f8ee34c86cec16c33f7db8cb65144df9dd0fc70ce86eaebe54b6782411",
+      "item_count": 482242
+    },
+    {
+      "month": "2023-12",
+      "name": "sentinel-2-l2a.parquet/part-0101_2023-12-01T00:10:09.024000+00:00_2023-12-31T23:52:29.024001+00:00.parquet",
+      "size_bytes": 495533344,
+      "etag": "0x8DF44559BF90ECC",
+      "path": "data/benchmark-source/part-0101_2023-12-01T00:10:09.024000+00:00_2023-12-31T23:52:29.024001+00:00.parquet",
+      "sha256": "955c0a01ed3a0d27f26601f2e4bd7ac883bce745d8c8501ba195155d886b252d",
+      "item_count": 352465
+    },
+    {
+      "month": "2024-01",
+      "name": "sentinel-2-l2a.parquet/part-0102_2024-01-01T00:07:49.024000+00:00_2024-01-31T23:51:21.024001+00:00.parquet",
+      "size_bytes": 411179549,
+      "etag": "0x8DF4457C6976EE4",
+      "path": "data/benchmark-source/part-0102_2024-01-01T00:07:49.024000+00:00_2024-01-31T23:51:21.024001+00:00.parquet",
+      "sha256": "af384f33d88c3b2140d9bfa8e9f632b486523c648d9864f666472ab80a11bddf",
+      "item_count": 297467
+    },
+    {
+      "month": "2024-02",
+      "name": "sentinel-2-l2a.parquet/part-0103_2024-02-01T00:00:11.024000+00:00_2024-02-29T23:52:29.024001+00:00.parquet",
+      "size_bytes": 469760690,
+      "etag": "0x8DF445A3760FB30",
+      "path": "data/benchmark-source/part-0103_2024-02-01T00:00:11.024000+00:00_2024-02-29T23:52:29.024001+00:00.parquet",
+      "sha256": "cb4159b307c233c87f693e4b05a9d9504e941597f837c91fdf496e2e773b163a",
+      "item_count": 339996
+    },
+    {
+      "month": "2024-03",
+      "name": "sentinel-2-l2a.parquet/part-0104_2024-03-01T00:07:49.024000+00:00_2024-03-31T23:51:31.024001+00:00.parquet",
+      "size_bytes": 528494255,
+      "etag": "0x8DF445CFF3F6B88",
+      "path": "data/benchmark-source/part-0104_2024-03-01T00:07:49.024000+00:00_2024-03-31T23:51:31.024001+00:00.parquet",
+      "sha256": "0b9fb571853ec6d928e2e2e78f57df121a34fd617299979f84e26c7de8f3f0ff",
+      "item_count": 379543
+    },
+    {
+      "month": "2024-04",
+      "name": "sentinel-2-l2a.parquet/part-0105_2024-04-01T00:04:31.024000+00:00_2024-04-30T23:51:31.024001+00:00.parquet",
+      "size_bytes": 522319540,
+      "etag": "0x8DF442686246278",
+      "path": "data/benchmark-source/part-0105_2024-04-01T00:04:31.024000+00:00_2024-04-30T23:51:31.024001+00:00.parquet",
+      "sha256": "0c516d993cba620bbf566349ddf1d80e870bde5fc0c7434977afab2053db3fbf",
+      "item_count": 378030
+    },
+    {
+      "month": "2024-05",
+      "name": "sentinel-2-l2a.parquet/part-0106_2024-05-01T00:07:31.024000+00:00_2024-05-31T23:38:21.024001+00:00.parquet",
+      "size_bytes": 540926502,
+      "etag": "0x8DF44296FF41D2C",
+      "path": "data/benchmark-source/part-0106_2024-05-01T00:07:31.024000+00:00_2024-05-31T23:38:21.024001+00:00.parquet",
+      "sha256": "4daca07b0f0ed2c96b8f98e96d90cdf97022d9db12d5e07f828de2fd739be917",
+      "item_count": 390208
+    },
+    {
+      "month": "2024-06",
+      "name": "sentinel-2-l2a.parquet/part-0107_2024-06-01T00:01:39.024000+00:00_2024-06-30T23:38:21.024001+00:00.parquet",
+      "size_bytes": 538432417,
+      "etag": "0x8DF442C5B6F3218",
+      "path": "data/benchmark-source/part-0107_2024-06-01T00:01:39.024000+00:00_2024-06-30T23:38:21.024001+00:00.parquet",
+      "sha256": "26b040313f79d5b79912881a0b0e2410bb48de47bd7274880f8edf5ea59647f0",
+      "item_count": 392845
+    },
+    {
+      "month": "2024-07",
+      "name": "sentinel-2-l2a.parquet/part-0108_2024-07-01T00:01:49.024000+00:00_2024-07-31T23:57:39.024001+00:00.parquet",
+      "size_bytes": 516954444,
+      "etag": "0x8DF442F616F7AD8",
+      "path": "data/benchmark-source/part-0108_2024-07-01T00:01:49.024000+00:00_2024-07-31T23:57:39.024001+00:00.parquet",
+      "sha256": "be35c6d465fd04b3d969be34da7c7a5c3a4fd3d7e110f0f5185653409bb83104",
+      "item_count": 394316
+    },
+    {
+      "month": "2024-08",
+      "name": "sentinel-2-l2a.parquet/part-0109_2024-08-01T00:01:19.024000+00:00_2024-08-31T23:56:11.024001+00:00.parquet",
+      "size_bytes": 453082566,
+      "etag": "0x8DF4432576F0B30",
+      "path": "data/benchmark-source/part-0109_2024-08-01T00:01:19.024000+00:00_2024-08-31T23:56:11.024001+00:00.parquet",
+      "sha256": "cefc0db0a4047b49c80284c13b9b2978c4b6f5a554941d33b343fcb42fc57d81",
+      "item_count": 386222
+    },
+    {
+      "month": "2024-09",
+      "name": "sentinel-2-l2a.parquet/part-0110_2024-09-01T00:17:21.024000+00:00_2024-09-30T23:56:21.024001+00:00.parquet",
+      "size_bytes": 337608430,
+      "etag": "0x8DF443475FEF158",
+      "path": "data/benchmark-source/part-0110_2024-09-01T00:17:21.024000+00:00_2024-09-30T23:56:21.024001+00:00.parquet",
+      "sha256": "c42a4d0c7d8d6e313e27e7652cefc91647ed40ca9eefead4e7e39fda6a633a1b",
+      "item_count": 284256
+    },
+    {
+      "month": "2024-10",
+      "name": "sentinel-2-l2a.parquet/part-0111_2024-10-01T00:14:31.024000+00:00_2024-10-31T23:52:31.024001+00:00.parquet",
+      "size_bytes": 424256656,
+      "etag": "0x8DF443720EF22C0",
+      "path": "data/benchmark-source/part-0111_2024-10-01T00:14:31.024000+00:00_2024-10-31T23:52:31.024001+00:00.parquet",
+      "sha256": "4f2918e9b38334b1450a9ddfeae4b4ce13f0e1a24bd05944791506a4d66331f2",
+      "item_count": 358191
+    },
+    {
+      "month": "2024-11",
+      "name": "sentinel-2-l2a.parquet/part-0112_2024-11-01T00:16:49.024000+00:00_2024-11-30T23:52:31.024001+00:00.parquet",
+      "size_bytes": 360193028,
+      "etag": "0x8DF44396D1B8874",
+      "path": "data/benchmark-source/part-0112_2024-11-01T00:16:49.024000+00:00_2024-11-30T23:52:31.024001+00:00.parquet",
+      "sha256": "2ef13f559ebf9b40ed1a55f3f272afab40329b41e4e4afbfc0af8db0b4e245c4",
+      "item_count": 305161
+    },
+    {
+      "month": "2024-12",
+      "name": "sentinel-2-l2a.parquet/part-0113_2024-12-01T00:07:51.024000+00:00_2024-12-31T23:51:29.024001+00:00.parquet",
+      "size_bytes": 386946132,
+      "etag": "0x8DF443BEC4CFEFC",
+      "path": "data/benchmark-source/part-0113_2024-12-01T00:07:51.024000+00:00_2024-12-31T23:51:29.024001+00:00.parquet",
+      "sha256": "9674e49a90b4709d6e6e9ca63316864c6a17754396fd294ac7a5ce5ec7b68969",
+      "item_count": 329607
+    }
+  ]
+}
